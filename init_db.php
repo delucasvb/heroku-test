@@ -16,9 +16,4 @@ $app->register(new PdoServiceProvider(),
     )
 );
 
-$host = $app['pdo.dsn.host'];
-$dbname = $app['pdo.dsn.mysql:dbname'];
-$user = $app['pdo.username'];
-$pass = $app['pdo.password'];
-
-$pdo = new PDO("mysql:host='.$host.'; dbname='.$dbname.';", $user, $pass);
+$pdo = new PDO($app['pdo.dsn'], $app['pdo.username'], $app['pdo.password']);
