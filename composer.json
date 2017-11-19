@@ -1,0 +1,14 @@
+{
+    "name": "lucas/heroku-test",
+    "type": "project",
+    "require": {
+        "herrera-io/silex-pdo": "^1.2"
+    },
+    "license": "GNU GPL3",
+    "authors": [
+        {
+            "name": "Lucas Vander Beken",
+            "email": "delucasvb@gmail.com"
+        }
+    ]
+}
