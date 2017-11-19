@@ -17,3 +17,12 @@ $app->register(new PdoServiceProvider(),
 );
 
 $pdo = new PDO($app['pdo.dsn'], $app['pdo.username'], $app['pdo.password']);
+
+$pdo->exec("CREATE TABLE messages (messageID bigserial PRIMARY KEY, body text, sender text)");
+$pdo->exec("INSERT INTO messages (body, sender) VALUES ('Hello, World!', 'myuser@gmail.com')");
+
+foreach ($pdo->query("SELECT * FROM messages") as $row) {
+    print $row['messageID'] . "&nbsp;&nbsp;&nbsp;&nbsp;";
+    print $row['body'] . "&nbsp;&nbsp;&nbsp;&nbsp;";
+    print $row['sender'] . "<br/>";
+}
