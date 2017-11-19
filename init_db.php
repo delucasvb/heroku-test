@@ -2,7 +2,7 @@
 
 $dbopts = parse_url(getenv('DATABASE_URL'));
 
-echo $dbopts;
+print_r($dbopts);
 
 //$app->register(new Herrera\Pdo\PdoServiceProvider(),
 //    array(
