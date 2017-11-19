@@ -1,5 +1,7 @@
 <?php
 
+require('vendor/autoload.php');
+
 use Herrera\Pdo\PdoServiceProvider;
 use Silex\Application;
 
