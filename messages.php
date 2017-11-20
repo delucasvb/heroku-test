@@ -8,4 +8,5 @@ require("app_start.php");
 //    print $row['sender'] . "<br/>";
 //}
 
-print_r($pdo->query("SELECT * FROM messages"));
+foreach ($pdo->query("SELECT * FROM messages") as $row)
+    print_r($row);
