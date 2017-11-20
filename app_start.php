@@ -15,3 +15,5 @@ $app->register(new PdoServiceProvider(),
         'pdo.password' => $dbopts["pass"]
     )
 );
+
+$pdo = new PDO($app['pdo.dsn'], $app['pdo.username'], $app['pdo.password']);
